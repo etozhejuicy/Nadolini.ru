@@ -17,12 +17,12 @@ body {
 a {
     text-decoration: none;
 }
-
+/*
 .container {
     width: 1440px;
     margin: 0 auto;
 }
-/*
+*/
 .container {
 width: 100%;
 padding-top: 0px;
@@ -30,7 +30,7 @@ padding-bottom: 0px;
 margin-left: auto;
 margin-right: auto;
 }
-*/
+
 .text__center {
     text-align: center;
 }
@@ -224,7 +224,7 @@ margin-right: auto;
 /* content start */
 .content {
     min-height: 69vh;
-    padding: 0 100px;
+    padding: 0 10%;
     background: #ffffff;
 }
 
@@ -295,7 +295,7 @@ h1.main__title {
 	height: 400px;
 	margin: 0 auto;
 	position: relative;
-    width: 1188px;
+    width: 100%;
     background: #333333;
 }
 
@@ -326,9 +326,9 @@ h1.main__title {
     position: absolute;
     background: rgba(51, 51, 51, 0.4);
     width: 40%;
-    height: 100%;
+    height: inherit;
     text-align: left;
-    padding: 70px;
+    padding: 5%;
 }
 
 .slider__block h1 {
@@ -348,7 +348,7 @@ h1.main__title {
 .slide1 img, .slide2 img, .slide3 img {
     background-size: cover;
     width: 100%;
-    height: auto;
+    height: inherit;
 }
 
 #slide1:checked ~ .slider > .slide1,
@@ -410,16 +410,19 @@ h1.main__title {
 
 /* items block list start */
 .items__block-list {
-    width: 1188px;
+    width: 100%;
     margin: 55px auto;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
 }
 
 .items__block-list .item {
-    width: 270px;
-    margin-right: 16px;
+    max-width: 260px;
+    margin: 0 1%;
+    padding-bottom: 10px;
 }
 
 .items__block-list .item .item__image {
@@ -439,7 +442,7 @@ h1.main__title {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 130%;
+    line-height: 18px;
     text-transform: uppercase;
     color: #333333;
     margin: 15px 0;
@@ -460,7 +463,11 @@ h1.main__title {
     margin: 0 auto;
     width: 100%;
     display: flex;
-    padding: 0 23px 100px 23px;
+    padding: 0 0 10% 0;
+}
+
+.block__preview-info .float__left {
+    width: 100%;
 }
 
 .block__preview-info .float__right {
@@ -469,8 +476,8 @@ h1.main__title {
 }
 
 .block__preview-info .image {
-    width: 503px;
-    height: 450px;
+    width: 100%;
+    height: auto;
     overflow: hidden;
 }
 
@@ -484,14 +491,14 @@ h1.main__title {
 .block__gray {
     display: flex;
     margin: 0 auto;
-    padding: 39px 23px;
+    padding: 2% 8%;
     width: 100%;
     background: #F5F5F5;
     justify-content: center;
 }
 
 .block__gray .info {
-    width: 586px;
+    width: 50%;
     font-family: 'Museo Sans Cyrl 300';
     font-style: normal;
     font-weight: 300;
@@ -516,7 +523,7 @@ h1.main__title {
     background: #4F4F4F;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 126px;
+    padding: 3% 8%;
     display: flex;
 }
 
@@ -1471,8 +1478,13 @@ h1.main__title {
     }
     
     .slider__block h1 {
+        font-size: 100%;
         text-transform: uppercase;
         color: #FFFFFF;
+    }
+
+    .slider__block .btn__primary {
+        font-size: 60%;
     }
     
     .slider__block span {
@@ -2022,8 +2034,8 @@ h1.main__title {
 
     .slide1 img, .slide2 img, .slide3 img {
         background-size: contain;
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
 
     .slider__block {
@@ -2140,5 +2152,48 @@ h1.main__title {
     .sub__footer {
         padding: 15px;
         display: block;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .header .title {
+        font-size: 28px;
+        line-height: initial;
+        text-align: left;
+        margin: 0 10px;
+     }
+ 
+     .header .sub__title-main {
+         font-size: 9px;
+         line-height: initial;
+         text-align: left;
+         margin: 0 10px;
+     }
+ 
+     .header .sup__title-normal {
+         font-size: 11px;
+         margin: 0;
+     }
+ 
+     .header .sub__title-underline, .header .sub__title-underline a {
+         font-size: 11px;
+     }
+ 
+     .header .sup__title-bold, .header .sup__title-bold a, .header .sub__title-bold, .header .sub__title-bold a {
+         font-size: 11px;
+     }
+ 
+     .header .sup__title-bold-too, .header .sub__title-bold-too {
+         font-size: 11px;
+     }
+     
+    .menu__wrapper a {
+        font-family: 'Museo Sans Cyrl 300';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 17px;
+        color: #FFFFFF;
+        margin: 0 .3rem;
     }
 }
